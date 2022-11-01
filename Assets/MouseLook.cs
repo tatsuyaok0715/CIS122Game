@@ -11,12 +11,6 @@ public class MouseLook : MonoBehaviour
 
     float xRotation = 0f;
 
-    public float mouseSensitivity = 250f;
-
-    public Transform playerBody;
-
-    float xRotation = 90f;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +28,6 @@ public class MouseLook : MonoBehaviour
             //Clamp is for camera to not over rotate and look behind player
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        transform.localRotation = Quaternion.Euler(xRotation, 90f, 0f);
 
         playerBody.Rotate(Vector3.up * mouseX);
     }
