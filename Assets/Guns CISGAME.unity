@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d1385980456cd2044b282d73625457db, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.12112769, g: 0.15458488, b: 0.22906205, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -175,7 +175,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3d9e7f3a66d423c44854517acf9dbd07, type: 2}
+  - {fileID: 2100000, guid: ce4b77858ec6c0f469b07b034c21a85f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1165,7 +1165,6 @@ GameObject:
   - component: {fileID: 1981019272}
   - component: {fileID: 1981019271}
   - component: {fileID: 1981019273}
-  - component: {fileID: 1981019274}
   m_Layer: 0
   m_Name: First Person - Player
   m_TagString: Untagged
@@ -1223,26 +1222,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1981019271}
   speed: 10
-  gravity: -20
+  gravity: -25
   jumpHeight: 2
   groundCheck: {fileID: 2111225526}
   groundDistance: -1
   groundMask:
     serializedVersion: 2
     m_Bits: 512
---- !u!114 &1981019274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1981019270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e346850b1a560c4981e13a88f93046a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reloadKey: 114
 --- !u!1 &2111225525
 GameObject:
   m_ObjectHideFlags: 0
