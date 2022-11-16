@@ -1322,7 +1322,7 @@ GameObject:
   - component: {fileID: 95366873821991170}
   - component: {fileID: 95366873821991171}
   m_Layer: 0
-  m_Name: M40A3 Rifle_prefab
+  m_Name: M40A3 Rifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
