@@ -1321,6 +1321,7 @@ GameObject:
   - component: {fileID: 23516766982432682}
   - component: {fileID: 95366873821991170}
   - component: {fileID: 95366873821991171}
+  - component: {fileID: 95366873821991172}
   m_Layer: 0
   m_Name: M40A3 Rifle
   m_TagString: Untagged
@@ -1336,7 +1337,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215027887793138}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.252, y: -0.18700016, z: 0.62}
+  m_LocalPosition: {x: 0.2, y: -0.2, z: 0.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1403,7 +1404,7 @@ Animator:
   m_GameObject: {fileID: 1215027887793138}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: dabd84dcbf66ea04c9d47514b7444b12, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5e6c853a3c57c0a4f9f94b4615a6e8d4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1445,6 +1446,19 @@ MonoBehaviour:
   camShakeMagnitude: 0.2
   camShakeDuration: 0.2
   text: {fileID: 438742424}
+--- !u!114 &95366873821991172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215027887793138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98568c8a847672849a45c363ecfdadb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  M40A3_Rifle: {fileID: 0}
 --- !u!1 &1863646750684806676
 GameObject:
   m_ObjectHideFlags: 0
