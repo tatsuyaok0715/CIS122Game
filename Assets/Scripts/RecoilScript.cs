@@ -24,7 +24,7 @@ public class RecoilScript : MonoBehaviour
     IEnumerator StartRecoil()
     {
         M40A3_Rifle.GetComponent<Animator>().Play("Recoil");
-        yield return new WaitForSeconds(0.100f);
+        yield return new WaitForSeconds(0.20f);
         M40A3_Rifle.GetComponent<Animator>().Play("New State");
     }
 }
