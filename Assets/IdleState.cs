@@ -8,8 +8,6 @@ public class IdleState : StateMachineBehaviour
     Transform player;
     float chaseRange = 8;
 
-    Debug.Log("idle state");
-
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
