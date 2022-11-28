@@ -25,6 +25,7 @@ public class GunSystem : MonoBehaviour
     public CamShake camShake;
     public float camShakeMagnitude, camShakeDuration;
     public TextMeshProUGUI text;
+    public int damageAmount = 20;
 
     private void Awake()
     {
@@ -65,10 +66,13 @@ public class GunSystem : MonoBehaviour
         //RayCast
         if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, range, whatIsEnemy))
         {
-            Debug.Log(rayHit.collider.name);
 
-           /* if (rayHit.collider.CompareTag("Enemy"))
-                rayHit.collider.GetComponent<ShootingAi>().TakeDamage(damage); */
+
+            Debug.Log("casted ray");
+            Debug.Log(rayHit.collider.name);
+           
+            rayHit.collider.gameObject.GetComponent<Dragon>().TakeDamage(damageAmount);
+
         }
 
         //ShakeCamera
@@ -78,6 +82,8 @@ public class GunSystem : MonoBehaviour
         Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
         Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
 
+        //
+
         bulletsLeft--;
         bulletsShot--;
 
@@ -85,7 +91,14 @@ public class GunSystem : MonoBehaviour
 
         if(bulletsShot > 0 && bulletsLeft > 0)
         Invoke("Shoot", timeBetweenShots);
+
+
+
+
+
     }
+
+
     private void ResetShot()
     {
         readyToShoot = true;
@@ -100,4 +113,26 @@ public class GunSystem : MonoBehaviour
         bulletsLeft = magazineSize;
         reloading = false;
     }
+
+
+
+    private void Start()
+    {
+        //Destroy(gameObject, 1000);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(transform.GetComponent<Rigidbody>());
+        if(other.tag == "Dragon")
+        {
+            other.GetComponent<Dragon>().TakeDamage(damageAmount);
+
+        }
+    }
+
+
+
+
+
 }
