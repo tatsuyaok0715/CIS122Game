@@ -67,7 +67,6 @@ public class GunSystem : MonoBehaviour
         if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, range, whatIsEnemy))
         {
 
-
             Debug.Log("casted ray");
             Debug.Log(rayHit.collider.name);
            
@@ -118,7 +117,7 @@ public class GunSystem : MonoBehaviour
 
     private void Start()
     {
-        //Destroy(gameObject, 1000);
+        //Destroy(gameObject, 10);
     }
 
     private void OnTriggerEnter(Collider other)
