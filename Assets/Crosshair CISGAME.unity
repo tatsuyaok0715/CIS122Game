@@ -251,8 +251,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1172315952}
   - {fileID: 4384873973564070}
+  - {fileID: 1172315952}
   m_Father: {fileID: 1863646752208255672}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -279,7 +279,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120026641}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: dabd84dcbf66ea04c9d47514b7444b12, type: 3}
   m_Controller: {fileID: 9100000, guid: b1941e927383878458112e07be673d5f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 120026644}
-  ScopeOverlay: {fileID: 1172315951}
+  ScopeOverlay: {fileID: 0}
   WeaponCamera: {fileID: 792274101}
   mainCamera: {fileID: 1863646752208255679}
   scopeFOV: 20
@@ -976,7 +976,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792274101}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 346, z: -0}
+  m_LocalPosition: {x: 0, y: 350.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1008,7 +1008,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 6
+  field of view: 3
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1019,7 +1019,7 @@ Camera:
   m_TargetTexture: {fileID: 8400000, guid: 62c5ef22f0cbd234c9de9613a9900ce3, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
+  m_HDR: 0
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
@@ -1166,7 +1166,7 @@ Transform:
   m_Children:
   - {fileID: 792274102}
   m_Father: {fileID: 120026642}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!23 &1172315953
 MeshRenderer:
@@ -1765,13 +1765,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215027887793138}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2, y: -0.19999993, z: 0.54}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.2, y: -0.19999993, z: 0.5400001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 120026642}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23516766982432682
 MeshRenderer:
@@ -1856,13 +1856,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
-  timeBetweenShooting: 0.5
-  spread: 0.05
-  range: 20
-  reloadTime: 1
-  timeBetweenShots: 0
-  magazineSize: 40
-  bulletsPerTap: 2
+  timeBetweenShooting: 0.2
+  spread: 0.01
+  range: 100
+  reloadTime: 3
+  timeBetweenShots: 4
+  magazineSize: 10
+  bulletsPerTap: 1
   allowButtonHold: 0
   fpsCam: {fileID: 1863646752208255679}
   attackPoint: {fileID: 651570846}
@@ -1905,7 +1905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1863646750684806677
 RectTransform:
   m_ObjectHideFlags: 0
