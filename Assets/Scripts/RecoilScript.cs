@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RecoilScript : MonoBehaviour
 {
-    public GameObject M40A3_Holder;
+    public GameObject M40A3_Rifle;
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +23,8 @@ public class RecoilScript : MonoBehaviour
 
     IEnumerator StartRecoil()
     {
-        M40A3_Holder.GetComponent<Animator>().Play("Recoil");
-        yield return new WaitForSeconds(0.1000f);
-        M40A3_Holder.GetComponent<Animator>().Play("New State");
+        M40A3_Rifle.GetComponent<Animator>().Play("Recoil");
+        yield return new WaitForSeconds(0.20f);
+        M40A3_Rifle.GetComponent<Animator>().Play("New State");
     }
 }
