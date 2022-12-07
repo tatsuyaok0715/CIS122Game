@@ -62,10 +62,11 @@ public class GunSystem : MonoBehaviour
         //Calculate Direction with Spread
         Vector3 direction = fpsCam.transform.forward + new Vector3(x, y, 0);
 
+        //Debug.Log("fpscam = "+ fpsCam.transform.position);
         //RayCast
         if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, range, whatIsEnemy))
         {
-            Debug.Log(rayHit.collider.name);
+            //Debug.Log(rayHit.collider.name);
 
            /* if (rayHit.collider.CompareTag("Enemy"))
                 rayHit.collider.GetComponent<ShootingAi>().TakeDamage(damage); */
