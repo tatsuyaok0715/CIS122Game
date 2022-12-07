@@ -15,7 +15,7 @@ public class BulletPhysics : MonoBehaviour
     private float mass = 150f;
 
     [Header("Muzzle velocity m/s")]
-    private float MuzzleVelocity = 880f;
+    private float MuzzleVelocity = 900f;
 
     [Header("Twist Inch/Turn")]
     private float Twist = 10f;
@@ -60,7 +60,9 @@ public class BulletPhysics : MonoBehaviour
             
 
             barrel_Pos = gObj.transform.position;
-            StartRotation = gObj.transform.eulerAngles;
+            StartRotation = gObj.transform.forward;
+
+
 
             m_Rigidbody = GetComponent<Rigidbody>();
             m_bullet = new Bullet(mass, MuzzleVelocity, Twist, bulletDia, bulletLength,pressure, temp ,barrel_Pos,StartRotation);
@@ -68,8 +70,8 @@ public class BulletPhysics : MonoBehaviour
             bulletInflight = true;
         }
 
-        Debug.Log("Pos = "+ gObj.transform.parent.position);
-        Debug.Log("Rot = "+ gObj.transform.parent.eulerAngles);
+        //Debug.Log("Pos = "+ gObj.transform.parent.position);
+        Debug.Log("Rot = "+ gObj.transform.forward);
 
 
     }
@@ -209,9 +211,10 @@ public class Bullet
 
         // Calculate Vector Component
 
-        this.velocity_Vector[0] =  this.muzzle_Velocity * Mathf.Cos(( (StartRotation.y ) * Mathf.PI / 180 ));
-        this.velocity_Vector[1] = -this.muzzle_Velocity * Mathf.Sin(( (StartRotation.y ) * Mathf.PI / 180 )) * Mathf.Sin(( (StartRotation.z  ) * Mathf.PI / 180 ));
-        this.velocity_Vector[2] =  this.muzzle_Velocity * Mathf.Sin(( (StartRotation.y ) * Mathf.PI / 180 )) * Mathf.Cos(( (StartRotation.z  ) * Mathf.PI / 180 ));
+        this.velocity_Vector[0] =  this.muzzle_Velocity * StartRotation.x;
+        this.velocity_Vector[1] = this.muzzle_Velocity * StartRotation.y;
+        this.velocity_Vector[2] = this.muzzle_Velocity * StartRotation.z;
+        //this.velocity_Vector[2] =  this.muzzle_Velocity * Mathf.Sin(( (StartRotation.y ) * Mathf.PI / 180 )) * Mathf.Cos(( (StartRotation.z  ) * Mathf.PI / 180 ));
 
 
         //Debug.Log(" X = " + StartRotation.x + " Vel = " + this.velocity_Vector[0]);
@@ -304,6 +307,11 @@ public class Bullet
         this.pos[0] = pos[0] + (this.velocity_Vector[0] * dt);
         this.pos[1] = pos[1] + (this.velocity_Vector[1] * dt);
         this.pos[2] = pos[2] + (this.velocity_Vector[2] * dt);
+
+
+        //Debug.Log(" X Vel = " + this.velocity_Vector[0]);
+        //Debug.Log(" Y Vel = " + this.velocity_Vector[1]);
+        //Debug.Log(" Z Vel = " + this.velocity_Vector[2]);
 
 
     }
