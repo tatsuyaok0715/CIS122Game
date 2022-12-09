@@ -1,4 +1,4 @@
-# CIS122Game
+# NoEyeDeer Sandbox
 
 Main Goal: 
 Develop a system for realistic physical bullet for various types of bullets that implements real world forces in unity. Where this can be published into unity store for others to implement into their projects. 
